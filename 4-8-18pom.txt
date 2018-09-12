@@ -1,0 +1,50 @@
+public class LoginTest
+{
+    WebDriver driver= Driver.getDriver(Driver.DriverTypes.CHROME);
+
+    @Test
+    public void logintest()
+    {
+        ResourceBundle rb= ResourceBundle.getBundle("InvoicePlane");
+        String url=rb.getString("url");
+        driver.get(url);
+
+        Login login=new Login(driver);
+        login.setTxtEmail("someusername@gmail.com");
+        login.setTxtPassword("somepassword");
+        login.clickLogin();
+    }
+}
+===========================================================
+
+NOTE: the coding should be done respective pages only. 
+for example: forgot pwd element is on login page so,coding is done on login page but while writing test case for forgot pwd u have to create object of login class to access forgot pwd element.
+===========================================================
+7-8-18
+
+1. web elements are written in pages (src folder) and web elements are called as object repository.
+2. and test cases are written in testsrc folder
+============================================================
+8-8-18
+
+1. create an folder called Data
+2. create an excel sheet and save it in data folder
+3. add poi jar file
+===========================================================
+12-08-18
+1. while providing an excel sheet in  coding  sequences of parameters/(columns in excel) should be same in TestPageCoding- addClientmethod, dataprovider method, and in excel sheet 
+2. in excel sheet add 2 columns for expected result and xpath of actual result.
+3. also pass paramts in coding of TestSrcPage.
+4. handle this using assert stmt.
+5. use extent report in before class method and test method and afterclass
+============================================================
+19/8/2018
+
+UI testing is about look and feel of an web page.
+
+1. keep test src page name same as of Regression\LoginTest. as UI_Testing\LoginTest.
+2. Every web element will having its own test such as isDisplayed() and isEnabled() respectively which are displayed in Web page.
+3. isDisplayed is in-built function so use different function name.
+4. make web elements as public in pages. i.e. src\Login.java
+5.Different fuctions can be written on single web element like isDisplayed,isEnabled, gettext().
+6. Can write a single function with different web elements exmaple for Visibility() - email & pwd doni ekach fn madhe lihu sakto

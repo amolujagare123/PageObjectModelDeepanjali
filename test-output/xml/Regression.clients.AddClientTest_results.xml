@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Regressions"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="17.725">
+  <properties />
+  
+  
+            <testcase name="addClienTest" time="5.894" classname="Regression.clients.AddClientTest" />
+                <testcase name="addClienTest" time="6.002" classname="Regression.clients.AddClientTest" />
+                <testcase name="addClienTest" time="5.829" classname="Regression.clients.AddClientTest" />
+      
+</testsuite>

@@ -1,0 +1,31 @@
+<suite name="TestNGProject">
+    <!-- <listeners>
+         <listener class-name="org.testng.reporters.EmailableReporter2" />
+     </listeners>-->
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <test name="Regressions">
+        <classes>
+            <class name="Regression.LoginTest"/>
+            <class name="Regression.ForgotPasswordTest"/>
+            <class name="Regression.clients.AddClientTest"/>
+        </classes>
+    </test>
+
+    <test name="UITest">
+        <classes>
+            <class name="UI_Testing.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="DBTest">
+        <classes>
+            <class name="DB_Testing.AddClientTest"/>
+        </classes>
+    </test>
+
+</suite>
